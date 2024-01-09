@@ -1,0 +1,33 @@
+mat-card {
+    width: 33%;
+    left: -23%;
+    top: 30%;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin-bottom:5%;
+    margin-top:5%;
+  }
+  mat-form-field {
+    width: 100%;
+  }
+  .green {
+    background-color: rgb(41, 115, 41);
+    color: white;
+  }
+  mat-card {
+    width: 143%;
+    left: -23%;
+    top: 30%;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin-bottom:5%;
+    margin-top:5%;
+  }
+  mat-form-field {
+    width: 100%;
+  }
+  .green {
+    background-color: rgb(41, 115, 41);
+    color: white;
+  }
+  

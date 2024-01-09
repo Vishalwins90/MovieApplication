@@ -1,0 +1,38 @@
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a style="color: red" class="navbar-brand">NETFLIX</a>
+      <div class="d-flex" role="search">
+      <input  class="form-control me-2" type="search" [(ngModel)]="filterBy" 
+        placeholder="Search" aria-label="Search" />
+      <button  (click)="Filter()" class="btn btn-outline-success" type="submit">Search</button>
+    </div>
+  </div>
+</nav>
+<div class="bg-image" style="max-width: 98rem" *ngFor="let product of newimage">
+  <img [src]=product.image class="w-100" />
+  <div class="mask text-light d-flex justify-content-center flex-column text-center"
+    style="background-color: rgba(0, 0, 0, 0.5)">
+    <h4 style="margin-top: -372px; color: blue; font-size: 80px">
+    {{product.title}}
+    </h4>
+    <p class="m-0">
+      Banner, Lang, Rogers, and Stark time-travel to New York City during Loki's
+      attack in 2012. At the Sanctum Sanctorum, Banner convinces the Ancient One
+      to give him the Time Stone after promising to return the various Stones to
+      their proper points in time. At Stark Tower, Rogers retrieves the Mind
+      Stone from Hydra sleeper agents, but Stark and Lang's attempt to steal the
+      Space Stone fails, allowing 2012-Loki to escape with it. Rogers and Stark
+      travel to Camp Lehigh in 1970, where Stark obtains an earlier version of
+      the Space Stone and encounters his father, Howard. Rogers steals Pym
+      Particles from Hank Pym to return to the present and spies his lost love,
+      Peggy Carter.
+    </p>
+  </div>
+</div>
+<div class="firstheading" style="margin-left: 20px;">
+  <h1>Action Movies</h1>
+</div>
+<div class="card-group" style="display: flex; height: 270px; margin-top: 126px;">
+  <div style="margin-left: 5px;" class="card" *ngFor="let product of fetchAllData">
+    <img (click)="Moviedeatail(product.id)" style="height: 260px; width: 290px;" src="{{product.image}}" alt="" />
+  </div>

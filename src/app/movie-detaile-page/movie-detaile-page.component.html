@@ -1,0 +1,34 @@
+<div class="product-details">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7" *ngFor="let product of fetchAllData">
+        <img style="height: 260px; width: 238px;" src="{{product.image}}" alt="" />
+      </div>
+      <div style="margin-left: 319px;margin-top: -228px;" class="col-lg-5" *ngFor="let product of fetchAllData">
+        <h4>Trailor</h4><a href="{{product.Trailor}}">Click To Watch the Movie Trailor</a>
+        <h4>Title</h4>{{product.title}}
+        <h4>Plot :</h4> {{product.plot}}
+        <h4>Year :</h4> ₹{{product.year}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="d">
+  <button type="button" class="btn btn-primary" style="margin-left: 953px; margin-top: -290;" data-toggle="modal" data-target="#exampleModal" (click)="openDialog()">
+    Give review
+  </button>
+</div>
+<div class="product-details">
+  <div class="container">
+    <div class="row">
+      <div style="margin-left: 319px;margin-top: -228px; margin: 43px; margin-left: 817px;" class="col-lg-5"
+        *ngFor="let data of reviews">
+        <h4>{{data.Heading}}</h4>
+        <h4>Name</h4>{{data.name}}
+        <h4>Description :</h4>{{data.description}}
+        <h4>Rating:</h4>{{data.rating}}
+      </div>
+    </div>
+  </div>
+</div>

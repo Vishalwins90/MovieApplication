@@ -1,0 +1,55 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Iron man",
+      "key": false,
+      "year": 2022,
+      "movieid": 1,
+      "Trailor": "https://youtu.be/BoohRoVA9WQ?si=u-q1SR_vM9-q3PiS",
+      "plot": "A hero saves the city from a series of explosive attacks.",
+      "image": "https://w0.peakpx.com/wallpaper/129/587/HD-wallpaper-iron-man-ironman-ironman-walpaper-iron-man-mobile-walpaper.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Urban Vendetta",
+      "year": 2021,
+      "Trailor": "https://youtu.be/iCnPrfWHV5o?si=ouVEv9xeVQ7OY0gD",
+      "plot": "Seeking justice in the urban jungle.",
+      "key": false,
+      "movieid": 2,
+      "image": "https://images.unsplash.com/photo-1575270394615-964f0a48b6c4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dmVuZGV0dGElMjBtYXNrfGVufDB8fDB8fHww"
+    },
+    {
+      "id": 3,
+      "title": "Thor",
+      "key": true,
+      "year": 2020,
+      "movieid": 3,
+      "Trailor": "https://youtu.be/Go8nTmfrQd8?si=QAMniAiyEroH6OFH",
+      "plot": "Undercover agents battle crime in the midnight hours.",
+      "image": "https://wallpapercave.com/wp/wp4395007.jpg"
+    },
+    {
+      "id": 4,
+      "title": "The Avenger",
+      "year": 2022,
+      "key": false,
+      "movieid": 4,
+      "Trailor": "https://youtu.be/eOrNdBpGMv8?si=Jo8Ud1-Fx5q2GCRL",
+      "plot": "A hero saves the city from a series of explosive attacks.",
+      "image": "https://wallpapers.com/images/hd/avengers-characters-z0b2jhtwcxv7ag5z.webp"
+    },
+    {
+      "id": 5,
+      "title": "The batman",
+      "year": 2021,
+      "key": false,
+      "movieid": 5,
+      "Trailor": "https://youtu.be/mqqft2x_Aa4?si=DrQsuKVvqiGVJZac",
+      "plot": "Seeking justice in the urban jungle.",
+      "image": "https://blogger.googleusercontent.com/img/a/AVvXsEhKK5_RBna7iqHhF-Ug4xDt4YPFXjfhOMUs06RTZeZeb7piztPXTi02JF6XR7-IFqkavZ0_rUJs3zyG9D6LYZgw6DNHlh8ElSWxSPHLv4ONvZS9_oEsH6ffmKt0d2LvVx504Ji8hdkeCx1rPGPVDTe27zmSNB_YU0C5h8yhYcZIkyFJBipmEuLyvAYN4a4=w900"
+    }
+  ]
+
+}

@@ -1,0 +1,29 @@
+<mat-card>
+    <mat-card-content>
+        <div class="FormHeading">
+            <h3>Add-Rewiew</h3>
+        </div>
+        <hr>
+        <form class="example-form" [formGroup]="form" style="margin-left: 39px;">
+            <mat-form-field class="example-full-width">
+                <mat-label>Name</mat-label>
+                <input type="text" matInput formControlName="name" placeholder="Enter Your name please">
+            </mat-form-field>
+            <div class="password-field">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Description</mat-label>
+                    <input type="text" formControlName="description" matInput placeholder="Enter Your Description">
+
+                </mat-form-field>
+            </div>
+            <div class="password-field">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Rating</mat-label>
+                    <input maxlength="3"  (keypress)="restrictKey($event)" type="text" formControlName="rating" matInput placeholder="Enter Your rating">
+                    <mat-error *ngIf="form.get('rating').hasError('invalidRating')">
+                        Please enter rating between 1 and 5 number
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="button">
+            <button type="button" class="btn btn-primary" (click)="saveReview()">Save</button>
