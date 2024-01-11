@@ -13,13 +13,22 @@ import { AddReviewComponent } from './add-review/add-review.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
-
+import { LoginComponent } from './login/login.component';
+import {MatIconModule} from '@angular/material/icon';
+import { ToastrModule } from 'ngx-toastr';
+import { AuthGuard } from './core/auth.guard';
+import { unauthguard } from './core/unauth.guard';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     MovieDetailePageComponent,
-    AddReviewComponent
+    AddReviewComponent,
+    LoginComponent,
+    PagenotfoundComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
@@ -31,14 +40,17 @@ import { MatInputModule } from '@angular/material/input';
     MatDialogModule,
     MatFormFieldModule,
     MatCardModule,
-    MatInputModule
-    
+    MatInputModule,
+    MatIconModule,
+    ToastrModule.forRoot()
     // MAT_DIALOG_DATA
     
   ],
   providers: [
     {provide: MatDialogRef, useValue:{ }},
-    { provide: MAT_DIALOG_DATA, useValue: { } }
+    { provide: MAT_DIALOG_DATA, useValue: { } },
+    AuthGuard,
+    unauthguard
     // MatDialog,
 		// MatDialogRef
     // MatDialogRef 

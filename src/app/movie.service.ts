@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -7,25 +8,24 @@ import { Observable } from 'rxjs';
 })
 export class MovieService {
   private apiUrl = 'http://localhost:3000/posts';
-  private url = 'http://localhost:3001/reveiewmovie'
-  private url2 = 'http://localhost:3001/comments'
+   private userdetail='http://localhost:3000/userdetails'
+  // private url = 'http://localhost:3001/reveiewmovie'
+    private url = 'http://localhost:3000/reveiewmovie'
 
 
-  constructor(public http: HttpClient) {
+
+  constructor(public http: HttpClient,public toastr:ToastrService) {
   }
-  quizget() {
-    return this.http.get(this.apiUrl);
-  }
-  quizgetid(id: any) {
+   quizget() {
+     return this.http.get(this.apiUrl);
+   }
+  movieid(id: any) {
     return this.http.get(this.apiUrl + "/" + id);
   }
    moviereviewid() {
      return this.http.get(this.url);    
    }
-  //  sendmorereview(id: any,data:any) {
-  //   debugger
-  //   return this.http.post(this.url+"/"+id, data);
-  // }
+
   Data(data: any) {
     return this.http.post(this.url, data);
   }
@@ -38,4 +38,18 @@ export class MovieService {
  getReview(id:any,data:any){
   return this.http.get(this.apiUrl + "/" + id);
  }
+ userdata() {
+  return this.http.get(this.userdetail);
 }
+showWarning(message:any){
+  this.toastr.error(message)
+}
+
+sendmoreuser(data:any){
+debugger
+return this.http.post(this.userdetail, data);
+}
+}
+
+
+

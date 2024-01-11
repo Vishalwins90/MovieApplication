@@ -50,6 +50,62 @@
       "plot": "Seeking justice in the urban jungle.",
       "image": "https://blogger.googleusercontent.com/img/a/AVvXsEhKK5_RBna7iqHhF-Ug4xDt4YPFXjfhOMUs06RTZeZeb7piztPXTi02JF6XR7-IFqkavZ0_rUJs3zyG9D6LYZgw6DNHlh8ElSWxSPHLv4ONvZS9_oEsH6ffmKt0d2LvVx504Ji8hdkeCx1rPGPVDTe27zmSNB_YU0C5h8yhYcZIkyFJBipmEuLyvAYN4a4=w900"
     }
+  ],
+  "userdetails": [
+    {
+      "name": "ss",
+      "lastname": "dsdsd",
+      "email": "sdsd",
+      "password": "s",
+      "id": 1
+    },
+    {
+      "name": "Vishal",
+      "lastname": "kumar",
+      "email": "Vishal123@gmail.com",
+      "password": "Vishal@123",
+      "id": 2
+    }
+  ],
+  "reveiewmovie": [
+    {
+      "id": 1,
+      "description": "ererer",
+      "rating": "r",
+      "name": "erere",
+      "movieid": 1
+    },
+    {
+      "id": 2,
+      "Heading": "All Ratings and Reviews",
+      "description": " this movie was realy.i enojed so much when i was watching this movie in threatre",
+      "rating": "2.5 of out 5",
+      "name": "Vishal",
+      "movieid": 2
+    },
+    {
+      "id": 3,
+      "Heading": "All Ratings and Reviews",
+      "description": "gfhgjjg",
+      "rating": "ghgh",
+      "name": "ghjhvgc",
+      "movieid": 3
+    },
+    {
+      "id": 4,
+      "Heading": "All Ratings and Reviews",
+      "description": "i enjoy so much this movie beacuse thor is my favourite character in the marvel team.beacuse he is god in the movie this is reason why i am like this movie so much",
+      "rating": "1.4 of out 5",
+      "name": "Golu",
+      "movieid": 4
+    },
+    {
+      "id": 5,
+      "Heading": "All Ratings and Reviews",
+      "description": "The avenger movie is best of sci-fiction. i the history beacuse its vfx is very good in the movie i enjoy realy so much this movie.i give 5 out of star to this movie ",
+      "rating": "5 of out 5",
+      "name": "Ben",
+      "movieid": 5
+    }
   ]
-
 }

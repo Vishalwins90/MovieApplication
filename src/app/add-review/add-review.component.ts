@@ -14,47 +14,60 @@ export class AddReviewComponent {
   addreview: any[] = [];
   form: any
   id: any
-  contacts: any = []
+  alldata: any = []
 
   currentList: any = [];
+  fetchAllData: any=[];
   constructor(public dialogRef: MatDialogRef<AddReviewComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any, public movie: MovieService, private route: ActivatedRoute, private formBuilder: FormBuilder) {
   }
   ngOnInit() {
-
+debugger
     this.form = this.formBuilder.group({
       name: ['', Validators.required],
       description: ['', Validators.required],
       rating: ['', [Validators.required, this.ratingValidator]],
     });
+       
+  let dat= this.fetchAllData.push(this.data.movierewiew);
 
+    this.alldata =dat
+    console.log(this.alldata)
+    
+    debugger
+     if (this.data && this.data.movierewiew) {
+      this.form.patchValue({
+        name: this.data.movierewiew.name,
+       description: this.data.movierewiew.description,
+     rating: this.data.movierewiew.rating,
+       });
+       
   }
+  console.log(this.data.movierewiew.reviews)
+  }
+  
 
   saveReview() {
+    debugger
     if (this.form.invalid) {
       this.form.markAllAsTouched();
     }
     else {
-      let data = {
-        movieid: this.data.movieid,
-        Heading: "All Ratings and Reviews",
-        description: this.form.value.description,
-        rating: this.form.value.rating,
-        name: this.form.value.name,
-      }
 
-
-      // update the rewiew the data by partiular id //
-      this.movie.Data(data).subscribe(
+      const reviewIdToUpdate = this.data.id;
+      //  update the rewiew the data by partiular id //
+      this.movie.patchreview(reviewIdToUpdate,this.form.value).subscribe(
         (data: any) => {
           this.addreview = data
           this.form.reset();
-          this.dialogRef.close();
-        },
-      );
-    }
-
+        this.dialogRef.close();
+        }, );
+     }
+  
   }
+    
+
+  
 
 
   ratingValidator(control: any) {

@@ -1,0 +1,64 @@
+<mat-card>
+<mat-card-content>
+<div>
+    <h1 style="color: blueviolet;"> SIGN-UP</h1>
+</div>
+<form [formGroup]="form">
+
+<mat-form-field class="example-full-width">
+    <mat-label>Name</mat-label>
+    <input type="text " matInput formControlName="name" placeholder="Enter your first name">
+    
+  <mat-error *ngIf="form.controls.name.hasError('required')">
+first name is required
+  </mat-error>
+</mat-form-field>
+<div class="password-field">
+    <mat-form-field class="example-full-width">
+        <mat-label>lastname</mat-label>
+        <input type="text" formControlName="lastname" matInput placeholder="Enter Your lastname">
+        <mat-error *ngIf="form.controls.lastname.hasError('required')">
+            last name is required.
+          </mat-error>
+    </mat-form-field>
+</div>
+
+<div class="password-field">
+    <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input  pattern="[^@\s]+@[^@\s]+\.[^@\s]+" type="email" formControlName="email" matInput placeholder="enter Your Email here">
+        <mat-error *ngIf="form.controls.email.hasError('required')">
+        email is required
+          </mat-error>
+          <mat-error *ngIf="form.controls.email.value">
+            Please enter valid email address
+          </mat-error> 
+    </mat-form-field>
+</div>
+<div class="password-field">
+    <mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input   required type="password" formControlName="password" matInput placeholder="enter Your password here">
+        <mat-error *ngIf="form.controls.password.hasError('required')">
+    Password is required
+          </mat-error>
+         <mat-error *ngIf="form.get('password').hasError('pattern')">
+            Password must contain at least one number, one uppercase and a lowercase letter 
+            and at least 
+         </mat-error>
+         <mat-error *ngIf="form.get('password').hasError('minlength')">
+            Password must be at least 6 characters long.
+
+          </mat-error>
+          <mat-error  *ngIf="form.get('password').hasError('maxlength')">
+            Password cannot be longer than 30 characters.</mat-error>
+    
+    </mat-form-field>
+</div>
+</form>
+<button style="margin-top: 45px;"   type="button" class="btn btn-primary" (click)="Submit()">Submit</button>
+<div class="text">
+    <h3>Already have an account? <a href="./login">Login now</a></h3>
+  </div>
+</mat-card-content>
+</mat-card>

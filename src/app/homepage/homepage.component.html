@@ -2,9 +2,11 @@
   <div class="container-fluid">
     <a style="color: red" class="navbar-brand">NETFLIX</a>
       <div class="d-flex" role="search">
+        <button style="margin-right: 50px;"  (click)="logout()" class="btn btn-outline-success" type="submit">logout </button>
       <input  class="form-control me-2" type="search" [(ngModel)]="filterBy" 
         placeholder="Search" aria-label="Search" />
       <button  (click)="Filter()" class="btn btn-outline-success" type="submit">Search</button>
+    
     </div>
   </div>
 </nav>

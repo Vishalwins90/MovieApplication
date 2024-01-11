@@ -19,25 +19,30 @@ export class MovieDetailePageComponent {
   adddata: any = []
   constructor(public dialogRef: MatDialogRef<AddReviewComponent>, public moviedata: MovieService, private route: ActivatedRoute, public router: Router, public dialog: MatDialog) {
   }
-  ngOnInit() {
+  ngOnInit() { 
     // show the movie details by particular id using another database//
     this.id = this.route.snapshot.paramMap.get('id');
-    this.moviedata.quizgetid(this.id).subscribe((data: any) => {
+    this.moviedata.movieid(this.id).subscribe((data: any) => {
       this.fetchAllData.push(data);
+
       this.adddata = data
+      console.log(this.fetchAllData.id)
     })
 
 
     // show review of all review//
     this.moviedata.moviereviewid().subscribe((reviewData: any) => {
-      this.reviews = reviewData.filter((data: any) => data.movieid == this.id)
+      this.reviews = reviewData.filter((data: any) => data.id == this.id)
+     
     })
+    
   }
   openDialog(): void {
     const dialogRef = this.dialog.open(AddReviewComponent, {
       width: '300px',
       data: {
-        movieid: this.adddata.movieid,
+        id: this.adddata.id,
+        movierewiew:this.reviews
       },
     });
     // update the value on without refresh the page in angular //
@@ -47,4 +52,5 @@ export class MovieDetailePageComponent {
       })
     })
   }
+  
 }

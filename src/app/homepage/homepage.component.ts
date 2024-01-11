@@ -31,4 +31,10 @@ export class HomepageComponent {
   Moviedeatail(id: any) {
     this.router.navigate([`detail/${id}`]);
   }
+  logout() {
+  
+    localStorage.removeItem('user');
+  
+    this.router.navigate(['']);
+  }
 }
